@@ -1,5 +1,6 @@
 // Initialize frame size
-document.getElementById('frame').classList.add('small');
+document.getElementById('frame').classList.add('medium');
+document.getElementById('frame').classList.add('rounded');
 
 // Handle frame size changes
 document.querySelectorAll('input[name="frame-size"]').forEach(radio => {
