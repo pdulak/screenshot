@@ -4,6 +4,10 @@ frame.classList.add('medium');
 frame.classList.add('rounded');
 frame.classList.add('sunset');
 
+// Initialize shadow
+const preview = document.getElementById('preview');
+preview.classList.add('shadow-medium');
+
 // Handle frame size changes
 document.querySelectorAll('input[name="frame-size"]').forEach(radio => {
     radio.addEventListener('change', (e) => {
@@ -29,6 +33,17 @@ document.getElementById('rounded-corners').addEventListener('change', (e) => {
         frame.classList.add('rounded');
     } else {
         frame.classList.remove('rounded');
+    }
+});
+
+// Handle shadow size changes
+document.getElementById('shadow-size').addEventListener('change', (e) => {
+    const preview = document.getElementById('preview');
+    preview.classList.remove('shadow-none', 'shadow-small', 'shadow-medium', 'shadow-large');
+    if (e.target.value !== 'none') {
+        preview.classList.add(`shadow-${e.target.value}`);
+    } else {
+        preview.classList.add('shadow-none');
     }
 });
 
