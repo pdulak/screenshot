@@ -1,12 +1,23 @@
-// Initialize frame size
-document.getElementById('frame').classList.add('medium');
-document.getElementById('frame').classList.add('rounded');
+// Initialize frame size and style
+const frame = document.getElementById('frame');
+frame.classList.add('medium');
+frame.classList.add('rounded');
+frame.classList.add('sunset');
 
 // Handle frame size changes
 document.querySelectorAll('input[name="frame-size"]').forEach(radio => {
     radio.addEventListener('change', (e) => {
         const frame = document.getElementById('frame');
         frame.classList.remove('small', 'medium', 'large');
+        frame.classList.add(e.target.value);
+    });
+});
+
+// Handle palette selection
+document.querySelectorAll('input[name="palette"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        const frame = document.getElementById('frame');
+        frame.classList.remove('sunset', 'ocean', 'forest', 'candy', 'lavender', 'peach', 'mint', 'sky');
         frame.classList.add(e.target.value);
     });
 });

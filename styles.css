@@ -29,11 +29,35 @@ body {
     margin-top: 15px;
 }
 
-.frame-size, .corner-style {
+.frame-size, .corner-style, .color-palette {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
+.palette-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.palette-preview {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.palette-preview.sunset { background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffd1ff); }
+.palette-preview.ocean { background: linear-gradient(45deg, #a1c4fd, #c2e9fb, #d4fc79); }
+.palette-preview.forest { background: linear-gradient(45deg, #96fbc4, #f9f586, #d4fc79); }
+.palette-preview.candy { background: linear-gradient(45deg, #ffecd2, #fcb69f, #ffd1ff); }
+.palette-preview.lavender { background: linear-gradient(45deg, #e2c1ff, #d4a5ff, #cc8dff); }
+.palette-preview.peach { background: linear-gradient(45deg, #ffd1b1, #ffb4b4, #ffecd2); }
+.palette-preview.mint { background: linear-gradient(45deg, #b9f6ca, #a7ffeb, #84ffff); }
+.palette-preview.sky { background: linear-gradient(45deg, #84ffff, #80d8ff, #b388ff); }
 
 .frame-size label, .corner-style label {
     cursor: pointer;
@@ -54,10 +78,18 @@ body {
 #frame {
     position: relative;
     display: inline-block;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
     border-radius: 10px;
-    transition: padding 0.3s ease;
+    transition: all 0.3s ease;
 }
+
+#frame.sunset { background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffd1ff); }
+#frame.ocean { background: linear-gradient(45deg, #a1c4fd, #c2e9fb, #d4fc79); }
+#frame.forest { background: linear-gradient(45deg, #96fbc4, #f9f586, #d4fc79); }
+#frame.candy { background: linear-gradient(45deg, #ffecd2, #fcb69f, #ffd1ff); }
+#frame.lavender { background: linear-gradient(45deg, #e2c1ff, #d4a5ff, #cc8dff); }
+#frame.peach { background: linear-gradient(45deg, #ffd1b1, #ffb4b4, #ffecd2); }
+#frame.mint { background: linear-gradient(45deg, #b9f6ca, #a7ffeb, #84ffff); }
+#frame.sky { background: linear-gradient(45deg, #84ffff, #80d8ff, #b388ff); }
 
 #frame.small {
     padding: 20px;
