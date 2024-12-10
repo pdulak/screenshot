@@ -1,3 +1,25 @@
+// Initialize frame size
+document.getElementById('frame').classList.add('small');
+
+// Handle frame size changes
+document.querySelectorAll('input[name="frame-size"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        const frame = document.getElementById('frame');
+        frame.classList.remove('small', 'medium', 'large');
+        frame.classList.add(e.target.value);
+    });
+});
+
+// Handle rounded corners toggle
+document.getElementById('rounded-corners').addEventListener('change', (e) => {
+    const frame = document.getElementById('frame');
+    if (e.target.checked) {
+        frame.classList.add('rounded');
+    } else {
+        frame.classList.remove('rounded');
+    }
+});
+
 document.addEventListener('paste', async (event) => {
     event.preventDefault();
     const items = event.clipboardData.items;

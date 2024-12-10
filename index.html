@@ -12,6 +12,17 @@
             <h1>Screenshot Beautifier</h1>
             <p>Press Ctrl+V to paste an image</p>
             <p>Press Ctrl+C to copy the beautified image</p>
+            <div class="controls">
+                <div class="frame-size">
+                    <span>Frame size:</span>
+                    <label><input type="radio" name="frame-size" value="small" checked> Small</label>
+                    <label><input type="radio" name="frame-size" value="medium"> Medium</label>
+                    <label><input type="radio" name="frame-size" value="large"> Large</label>
+                </div>
+                <div class="corner-style">
+                    <label><input type="checkbox" id="rounded-corners"> Rounded corners</label>
+                </div>
+            </div>
         </div>
         <div id="drop-zone">
             <div id="frame">
