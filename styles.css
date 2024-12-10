@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instructions {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#drop-zone {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    border-radius: 10px;
+}
+
+#preview {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
